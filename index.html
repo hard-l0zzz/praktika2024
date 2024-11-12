@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DungeonDice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo"><img src="img/logo_dm.png" width="60%" height="50%"></div>
+        <div class="menu">
+            <a>Каталог</a>
+            <a>Магазины</a>
+            <a class="login-button" id="openModal">Войти</a>
+            <img src="img/login3.png" width="15px" height="15px">
+        </div>
+    </div>
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form id="loginForm">
+                <label for="username" style="color: wheat;">Логин:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password" style="color: wheat;">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="submitBtn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заказ</h2>
+            <form id="orderForm">
+                <label for="username" style="color: wheat;">Имя:</label>
+                <p></p>
+                <input type="text" id="Name" name="Name" required>
+                <label for="password" style="color: wheat;" id="emailText">Почта:</label>
+                <input type="email" id="Email" name="Email" required>
+                <button type="submit" id="orderBtn">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div class="nav">
+        <button>Новинки</button>
+        <button>Хиты</button>
+        <button>Подземелья и драконы</button>
+        <button id="discountsButton">Скидки</button>
+        <button>Карточные игры</button>
+    </div>
+
+    <div class="news">
+        <h2>Новости о новых играх</h2>
+        <div class="news-images">
+            <img src="img/news1.webp" alt="Новинка 1">
+            <img src="img/news2.webp" alt="Новинка 2">
+            <img src="img/news3.webp" alt="Новинка 3">
+        </div>
+    </div>
+
+    <h2 class="catalog-title">Каталог игр</h2>
+    <div class="catalog">
+        <div class="game-container" style="height: 100%;">
+            <div class="game-card discount">
+                <img src="img/img6.jpg" alt="Игра 1" class="game-image">
+                <div class="game-info">
+                    <h3>Dungeons & Dragons. Стартовый набор</h3>
+                    <p class="price old-price">3490 руб.</p>
+                    <p class="price new-price">2680 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/img2.png" alt="Игра 1" class="game-image">
+                <div class="game-info">
+                    <h3>DND Running Team, шахматная модель</h3>
+                    <p class="price">1250 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/img1.png" alt="Игра 2" class="game-image">
+                <div class="game-info">
+                    <h3>Dungeons & Dragons: Dragonlance</h3>
+                    <p class="price">500 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="game-card discount">
+                <img src="img/img3.jpg" alt="Игра 2" class="game-image">
+                <div class="game-info">
+                    <h3>Dungeons & Dragons: Энциклопедия чудовищ</h3>
+                    <p class="price old-price">4490 руб.</p>
+                    <p class="price new-price">3560 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/img4.jpg" alt="Игра 2" class="game-image">
+                <div class="game-info">
+                    <h3>Берсерк. Герои. Генерал: Шарль де Лорм</h3>
+                    <p class="price">500 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/img5.jpg" alt="Игра 2" class="game-image">
+                <div class="game-info">
+                    <h3>Dungeons & Dragons. Руководство мастера подземелий</h3>
+                    <p class="price">500 руб.</p>
+                    <button class="order-button" id="openOrderModal">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="about" style="margin-left: 20px;">
+        <h2>О нас</h2>
+        <p>DungeonDice – это сеть фирменных магазинов, в которых представлен широчайший ассортимент настольных игр. К
+            нам приходят как преданные фанаты этого хобби, так и те, кто только начинает с ним знакомиться.</p>
+    </div>
+
+    <div class="footer">
+        <h2>Реквизиты</h2>
+        <p>Наименование организации: ООО "Дайс Компани"</p>
+        <p>Основной государственный регистрационный номер (ОГРН): 1337228420</p>
+        <p>Адрес: г. Лондон, ул. Штирлица, д. 12/16, офис 300</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
