@@ -22,17 +22,22 @@ document.getElementById("loginForm").onsubmit = function (event) {
 }
 
 var modal2 = document.getElementById("orderModal");
-var btn2 = document.getElementById("openOrderModal");
-var span2 = document.getElementsByClassName("close")[1];
+var btn2 = document.getElementsByClassName("order-button");
+var span2 = document.getElementsByClassName("close");
 
-btn2.onclick = function () {
-    modal2.style.display = "block";
+// Loop through all buttons and add click event listeners
+for (let i = 0; i < btn2.length; i++) {
+    btn2[i].onclick = function () {
+        modal2.style.display = "block";
+    }
 }
 
-span2.onclick = function () {
-    modal2.style.display = "none";
+// Add click event listener for closing the modal
+for (let j = 0; j < span2.length; j++) {
+    span2[j].onclick = function () {
+        modal2.style.display = "none";
+    }
 }
-
 
 window.onclick = function (event) {
     if (event.target == modal2) {
