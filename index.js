@@ -1,15 +1,11 @@
 
 var modal = document.getElementById("loginModal");
 var btn = document.getElementById("openModal");
-var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
     modal.style.display = "block";
 }
 
-span.onclick = function () {
-    modal.style.display = "none";
-}
 
 window.onclick = function (event) {
     if (event.target == modal) {
@@ -37,6 +33,7 @@ for (let j = 0; j < span2.length; j++) {
     span2[j].onclick = function () {
         modal2.style.display = "none";
         descriptionModal.style.display = "none";
+        modal.style.display = "none";
     }
 }
 
